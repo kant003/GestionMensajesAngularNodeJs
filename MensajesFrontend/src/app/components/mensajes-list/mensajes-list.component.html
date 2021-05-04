@@ -1,0 +1,9 @@
+<h1>Lista de mensajes guardados</h1>
+<div *ngFor="let mensaje of listaMensajes">
+  Mensaje: {{mensaje.msg}}  Usuario: {{mensaje.user}}
+
+  <a [routerLink]="['/editmensaje', mensaje._id]">Edit</a> |
+  <a [routerLink]="" (click)="borrarMensaje(mensaje._id)">Borrar</a>
+</div>
+
+ing

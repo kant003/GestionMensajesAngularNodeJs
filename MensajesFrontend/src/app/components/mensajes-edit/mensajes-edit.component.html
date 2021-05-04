@@ -1,0 +1,10 @@
+<h1>Datos del mensaje</h1>
+<form [formGroup]="form" (submit)="onSubmit(form.value)">
+  <label for="msg">Texto mensaje</label>
+  <input type="text" name="msg" formControlName="msg">
+  <br/>
+  <label for="user">Usuario</label>
+  <input type="text" name="user" formControlName="user">
+  <br/>
+  <input type="submit" value="Insertar" [disabled]="form.invalid">
+</form>
