@@ -1,0 +1,13 @@
+<h1>Datos del usuario</h1>
+<form [formGroup]="form" (submit)="onSubmit(form.value)">
+  <label for="Nombre">Nombre:</label>
+  <input type="text" name="nombre" formControlName="nombre">
+  <br/>
+  <label for="email">Email</label>
+  <input type="email" name="email" formControlName="email">
+  <br/>
+  <label for="password">Password</label>
+  <input type="password" name="password" formControlName="password">
+  <br/>
+  <input type="submit" value="Insertar" [disabled]="form.invalid">
+</form>

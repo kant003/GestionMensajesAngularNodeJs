@@ -8,12 +8,16 @@ import { MensajesListComponent } from './components/mensajes-list/mensajes-list.
 import { MensajesEditComponent } from './components/mensajes-edit/mensajes-edit.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UsersListComponent } from './components/users-list/users-list.component';
+import { UsersEditComponent } from './components/users-edit/users-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
     MensajesListComponent,
     MensajesEditComponent,
     MenuComponent,
+    UsersListComponent,
+    UsersEditComponent,
   ],
   imports: [
     BrowserModule,

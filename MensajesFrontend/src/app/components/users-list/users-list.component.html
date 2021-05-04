@@ -1,0 +1,15 @@
+<h1>Lista de usuarios guardados</h1>
+<div *ngFor="let usuario of listaUsuarios">
+  ID: {{usuario._id}}   <br>
+  Nombre: {{usuario.nombre}}   <br>
+  Email: {{usuario.email}}
+
+  <br/>
+
+
+  <a [routerLink]="['/edituser', usuario._id]">Edit</a> |
+  <a [routerLink]="" (click)="borrarUser(usuario._id)">Borrar</a>
+
+
+  <hr>
+</div>

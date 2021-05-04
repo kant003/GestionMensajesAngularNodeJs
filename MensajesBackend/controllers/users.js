@@ -9,6 +9,16 @@ async function getAll(req, res){
     }
 }
 
+async function getById(req, res){
+    let id = req.params.id
+    let user = await User.findById(id)
+    try{
+        res.status(200).json(user)
+    }catch(err){
+        res.status(500).json('Error al obtener un usuario')
+    }
+}
+
 async function insert(req, res){
     const nuevoUsuario = new User(req.body)
     try{
@@ -41,4 +51,4 @@ async function update(req, res){
     }
 }
 
-module.exports = {getAll, insert, remove, update}
+module.exports = {getAll, getById, insert, remove, update}
