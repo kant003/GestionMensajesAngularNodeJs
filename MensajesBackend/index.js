@@ -5,6 +5,7 @@ const cors = require('cors')
 const dotenv = require('dotenv')
 const routerMensajes = require('./routers/mensajes')
 const routerUsers = require('./routers/users')
+const routerAuth = require('./routers/auth')
 dotenv.config();
 
 let app = express();
@@ -14,6 +15,7 @@ app.use(morgan('dev'))
 
 app.use('/mensaje', routerMensajes)
 app.use('/user', routerUsers)
+app.use('/auth', routerAuth)
 
 const run = async() =>{
     const config = {
